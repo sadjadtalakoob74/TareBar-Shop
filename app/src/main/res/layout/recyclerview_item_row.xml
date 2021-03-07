@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:ignore="NamespaceTypo"
+    card_view:cardCornerRadius="20dp"
+    card_view:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:text="1-title"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@id/lessonImage"
+            card_view:layout_constraintTop_toBottomOf="@+id/courseStatus" />
+
+
+        <!-- <TextView
+             android:id="@+id/story_textview"
+             android:layout_width="wrap_content"
+             android:layout_height="100dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:contentDescription="@null"
+             android:ellipsize="end"
+             android:fontFamily="@font/proximanovaregular"
+             android:foregroundGravity="center"
+             android:maxLines="2"
+             android:padding="10dp"
+             android:scaleType="fitXY"
+             android:textColor="@android:color/black"
+             android:textSize="25sp"
+             card_view:layout_constraintBottom_toTopOf="@id/progressbar"
+             card_view:layout_constraintEnd_toEndOf="parent"
+             card_view:layout_constraintStart_toStartOf="parent"
+             card_view:layout_constraintTop_toBottomOf="@+id/textView"
+             card_view:layout_constraintVertical_bias="0.0" />-->
+
+        <TextView
+            android:id="@+id/courseStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="New"
+            android:textSize="13sp"
+            card_view:layout_constraintBottom_toTopOf="@+id/title_tv"
+            card_view:layout_constraintStart_toEndOf="@id/lessonImage"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintVertical_chainStyle="spread" />
+
+        <ImageView
+            android:id="@+id/lessonImage"
+            android:layout_width="77dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@null"
+
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@id/title_tv"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <!--<ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="328dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/startRoute"
+
+            />-->
+
+        <!--  <ImageView
+              android:id="@+id/ic_bookmark"
+              android:layout_width="0dp"
+              android:layout_height="50dp"
+              android:layout_marginStart="86dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:contentDescription="@null"
+              android:foregroundGravity="center_horizontal"
+              android:gravity="center_horizontal"
+              android:src="@drawable/ic_bookmark"
+              app:layout_constraintEnd_toStartOf="@id/ic_download"
+              app:layout_constraintHorizontal_chainStyle="packed"
+              app:layout_constraintStart_toStartOf="parent"
+              card_view:layout_constraintBottom_toBottomOf="parent"
+              card_view:layout_constraintEnd_toStartOf="@+id/ic_download"
+              card_view:layout_constraintStart_toStartOf="parent"
+              card_view:layout_constraintTop_toBottomOf="@id/progressbar" />-->
+
+        <!-- <ImageView
+             android:id="@+id/ic_download"
+             android:layout_width="0dp"
+             android:layout_height="50dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="10dp"
+             android:contentDescription="@null"
+             android:foregroundGravity="center_horizontal"
+             android:gravity="center_horizontal"
+             android:src="@drawable/download"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@id/ic_bookmark"
+             card_view:layout_constraintBottom_toBottomOf="parent"
+             card_view:layout_constraintEnd_toEndOf="parent"
+             card_view:layout_constraintStart_toStartOf="parent"
+             card_view:layout_constraintTop_toBottomOf="@id/progressbar" />-->
+
+
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/textView"
+              android:layout_marginTop="10dp"
+              android:orientation="vertical"
+              android:weightSum="2">
+
+         &lt;!&ndash;     <LinearLayout
+                  android:id="@+id/linearlayout1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/textView"
+                  android:layout_weight="1"
+                  android:gravity="center_horizontal"
+                  android:orientation="horizontal"
+                  android:weightSum="3">
+
+                  <ImageView
+                      android:id="@+id/textView31"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="10dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/circularbordersolid"
+                      android:src="@drawable/dl_icon"
+                      android:textColor="@android:color/white" />
+
+                  <ImageView
+                      android:id="@+id/textView32"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginRight="-10dp"
+                      android:layout_weight="1"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/circularbordersolid"
+                      android:src="@drawable/left_pointer"
+                      android:textColor="@android:color/white" />
+
+                  <TextView
+                      android:id="@+id/textView41"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_margin="10dp"
+                      android:layout_weight="1"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:text="Download"
+                      android:textColor="@android:color/black" />
+
+              </LinearLayout>
+  &ndash;&gt;
+
+          </LinearLayout>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

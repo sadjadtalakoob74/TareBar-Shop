@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/sample_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        style="@style/Theme.TareBarShop"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/image_slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_error_image="@drawable/error"
+        app:iss_period="1500"
+        app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_text_align="CENTER"
+        app:iss_title_background="@drawable/gradient"
+        app:iss_unselected_dot="@drawable/default_unselected_dot"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sample_editText"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_slider"/>
+
+    <!-- <ImageView
+         android:id="@+id/image"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:visibility="invisible"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:src="@mipmap/ic_launcher"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" /> -->
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
